@@ -31,7 +31,9 @@ const UserList = () => {
     }
 
     let matchesFilters = true;
-
+    if (filters.domain) {
+  matchesFilters = matchesFilters && user.domain === filters.domain;
+}
     if (filters.gender) {
       matchesFilters = matchesFilters && user.gender === filters.gender;
     }
